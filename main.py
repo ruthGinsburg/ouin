@@ -24,11 +24,12 @@ def on_mouse_press(x, y, button, modifiers):
     global score_label
     if button == mouse.LEFT:
         penis.update(x,y)
+        dog.update(random.randint(0, window.width - 20), random.randint(0, window.height - 20))
     if button == mouse.RIGHT:
         label.text = random.choice(words)
         score += 1
         score_label.text = f'score {score}'
-        dog.update(random.randint(0,window.width - 20),random.randint(0,window.height - 20))
+
 
 
 @window.event
